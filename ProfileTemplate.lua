@@ -1,5 +1,5 @@
 {
-  Money = 0,
+	Money = 0,
 	OwnedCharacters = {},
 	RedeemedCodes = {},
 	LastExitReason = "None"
