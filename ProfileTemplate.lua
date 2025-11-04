@@ -1,6 +1,4 @@
-{
-  Money = 0,
-  RedeemedCodes = {},
-  LastExitReason = "None",
-  OwnedCharacters = {}
-}
+Money = 0
+RedeemedCodes = {}
+LastExitReason = "None"
+OwnedCharacters = {}
