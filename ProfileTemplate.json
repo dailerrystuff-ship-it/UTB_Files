@@ -1,4 +1,4 @@
-Money = 0,
-OwnedCharacters = {},
-RedeemedCodes = {},
+Money = 0
+OwnedCharacters = {}
+RedeemedCodes = {}
 LastExitReason = "None"
