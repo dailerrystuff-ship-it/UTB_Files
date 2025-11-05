@@ -1,3 +1,8 @@
 {
-  "Profile":["RedeemedCodes":{}, "Coins":0, "LastExitReason":"None", "OwnedCharacters":{}]
+  "Profile": {
+    "OwnedCharacters": {},
+    "Coins": 0,
+    "RedeemedCodes": {},
+    "LastExitReason": "None"
+  }
 }
