@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roblox Nexus — Dark Core Experience</title>
+    <meta
+      name="description"
+      content="Максимально тёмный и эффектный Roblox-лендинг: стекло, неон, партиклы, анимации и интерактивная TD-панель."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="site-header glass reveal">
+      <div class="logo-wrap">
+        <div class="logo-spin"></div>
+        <span class="logo-text">ROBLOX NEXUS</span>
+      </div>
+      <nav>
+        <a href="#features">Фичи</a>
+        <a href="#simulator">TD Lab</a>
+        <a href="#worlds">Миры</a>
+        <a href="#community">Комьюнити</a>
+      </nav>
+      <button class="btn ghost">Connect</button>
+    </header>
+
+    <main>
+      <section class="hero reveal">
+        <div class="hero-content glass tilt-card">
+          <p class="tag">Roblox • Dark Neon • Tower Defense</p>
+          <h1>Ультра-тёмный Roblox-портал с живыми эффектами</h1>
+          <p>
+            Глубокий sci‑fi стиль, стеклянные панели, динамические партиклы и плавная
+            интерактивность. Идеальная витрина для твоей Tower Defense вселенной.
+          </p>
+          <div class="cta-row">
+            <button class="btn primary">Launch Creator Hub</button>
+            <button class="btn secondary">Watch Cinematic</button>
+          </div>
+          <div class="stats">
+            <div>
+              <span class="stat-number" data-target="240">0</span>
+              <small>Активных плейс-серверов</small>
+            </div>
+            <div>
+              <span class="stat-number" data-target="950">0</span>
+              <small>Скриптеров онлайн</small>
+            </div>
+            <div>
+              <span class="stat-number" data-target="48">0</span>
+              <small>Live-турниров / мес.</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-orb">
+          <div class="orb glow"></div>
+          <div class="orb-ring"></div>
+          <div class="orb-ring ring-2"></div>
+          <div class="floating-card glass reveal-delay">
+            <h3>Live Event</h3>
+            <p>Neon Siege Championship</p>
+            <span>22:00 MSK · 12 458 viewers</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="features" class="features reveal">
+        <h2>Эффекты и архитектура уровня top Roblox games</h2>
+        <div class="feature-grid">
+          <article class="glass card tilt-card">
+            <h3>Adaptive Waves AI</h3>
+            <p>Интеллект волн подстраивается под DPS и динамику вашей команды.</p>
+          </article>
+          <article class="glass card tilt-card">
+            <h3>Dark Glass UI</h3>
+            <p>Контрастный интерфейс в стиле high-end sci‑fi dashboard.</p>
+          </article>
+          <article class="glass card tilt-card">
+            <h3>Secure Economy</h3>
+            <p>Серверная валидация действий игрока и анти-эксплойт защита.</p>
+          </article>
+          <article class="glass card tilt-card">
+            <h3>VFX Stack</h3>
+            <p>Неоновые трассеры, импульсы, вспышки и эффектные финиш-удары.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="simulator" class="simulator reveal">
+        <h2>TD Logic Lab (interactive)</h2>
+        <div class="sim-grid">
+          <article class="glass panel">
+            <h3>Wave Control</h3>
+            <div class="panel-row">
+              <button class="btn primary" id="start-wave">Start</button>
+              <button class="btn secondary" id="pause-wave">Pause</button>
+              <button class="btn ghost" id="reset-wave">Reset</button>
+            </div>
+            <div class="progress-wrap">
+              <div class="progress-bar" id="wave-progress"></div>
+            </div>
+            <div class="readouts">
+              <p>Wave: <strong id="wave-number">1</strong></p>
+              <p>Credits: <strong id="credits">450</strong></p>
+              <p>Base HP: <strong id="base-hp">100</strong></p>
+            </div>
+          </article>
+
+          <article class="glass panel">
+            <h3>Tower Analyzer</h3>
+            <div class="tower-tabs" role="tablist" aria-label="Tower selection">
+              <button class="tower-tab active" data-tower="Scout">Scout</button>
+              <button class="tower-tab" data-tower="Plasma">Plasma</button>
+              <button class="tower-tab" data-tower="Titan">Titan</button>
+            </div>
+            <div class="tower-stats">
+              <p>DPS: <strong id="tower-dps">24</strong></p>
+              <p>Range: <strong id="tower-range">14</strong></p>
+              <p>Fire Rate: <strong id="tower-rate">0.55</strong></p>
+            </div>
+            <p class="tower-note" id="tower-note">
+              Лёгкая стартовая башня для ранних волн.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="worlds" class="worlds reveal">
+        <div class="glass worlds-panel">
+          <h2>Trending Roblox Worlds</h2>
+          <ul id="world-list">
+            <li class="world-item active"><span>01</span> Tower Defense: Neon Siege</li>
+            <li class="world-item"><span>02</span> Anime Battlegrounds: Rift</li>
+            <li class="world-item"><span>03</span> Sci‑Fi Tycoon: Orbital Core</li>
+            <li class="world-item"><span>04</span> Parkour Obby: Glitch Dimension</li>
+            <li class="world-item"><span>05</span> FPS Arena: Hyper Pulse</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="community" class="community reveal">
+        <div class="glass community-card">
+          <h2>Собери dream-team для Roblox проекта</h2>
+          <p>
+            Находи скриптеров, UI/VFX художников и билдеров, запускай тесты и масштабируй
+            игру с качеством студийного уровня.
+          </p>
+          <button class="btn primary">Join Creator Community</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Roblox Nexus · Dark Core Edition</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
